@@ -16,6 +16,11 @@ namespace DatingApp.Data
             _context = context;
         }
         //login user with username and password
+
+        public async Task<IEnumerable<User>> GetUsers()
+        {
+            return await _context.Users.ToListAsync();
+        }
         public async Task<User> Login(string userName, string password)
         {
             var user = await _context.Users.FirstOrDefaultAsync(x => x.UserName == userName);

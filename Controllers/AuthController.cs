@@ -29,6 +29,16 @@ namespace DatingApp.Controllers
             _auth = repo;
             _config = config;
         }
+
+        //get all user 
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers()
+        {
+            var users = await _auth.GetUsers();
+            return Ok(users);
+        }
+
+
         //register
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserRegisterDto userDto)
@@ -58,6 +68,9 @@ namespace DatingApp.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserLoginDto userDto)
         {
+
+
+
             //getting the existing user from database
             var existingUser = await _auth.Login(userDto.UserName.ToLower(), userDto.Password);
             if (existingUser == null)
@@ -90,6 +103,8 @@ namespace DatingApp.Controllers
             {
                 token = tokenHandler.WriteToken(token)
             });
+
+
 
 
 
