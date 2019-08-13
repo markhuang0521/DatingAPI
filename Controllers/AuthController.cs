@@ -69,8 +69,6 @@ namespace DatingApp.Controllers
         public async Task<IActionResult> Login(UserLoginDto userDto)
         {
 
-
-
             //getting the existing user from database
             var existingUser = await _auth.Login(userDto.UserName.ToLower(), userDto.Password);
             if (existingUser == null)
