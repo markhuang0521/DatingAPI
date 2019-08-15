@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{F64E4CB2-147E-4D68-AFEA-BFAA97A224BD}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Startup.cs" Line="35" Column="67" />
+      <File FileName="Controllers/UsersController.cs" Line="33" Column="36" />
+      <File FileName="helper/AutoMapperProfiles.cs" Line="32" Column="21" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DatingApp" expanded="True">
+            <Node name="DatingApp" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="UsersController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Dtos" expanded="True" />
+              <Node name="helper" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.DatingApp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
