@@ -18,5 +18,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="IUserRepo.cs" />
+    <Compile Remove="helper\UserForUpdateDto.cs" />
+    <Compile Remove="Dtos\UserForUpdate.cs" />
   </ItemGroup>
 </Project>

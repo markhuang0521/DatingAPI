@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{F64E4CB2-147E-4D68-AFEA-BFAA97A224BD}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Startup.cs" Line="35" Column="67" />
-      <File FileName="Controllers/UsersController.cs" Line="33" Column="36" />
-      <File FileName="helper/AutoMapperProfiles.cs" Line="32" Column="21" />
+      <File FileName="helper/AutoMapperProfiles.cs" Line="38" Column="6" />
+      <File FileName="Controllers/UsersController.cs" Line="63" Column="36" />
+      <File FileName="Startup.cs" Line="59" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +13,6 @@
               <Node name="Controllers" expanded="True">
                 <Node name="UsersController.cs" selected="True" />
               </Node>
-              <Node name="Data" expanded="True" />
               <Node name="Dtos" expanded="True" />
               <Node name="helper" expanded="True" />
               <Node name="Models" expanded="True" />
@@ -27,7 +26,9 @@
   <MonoDevelop.Ide.ItemProperties.DatingApp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/markhuang/Documents/DatingAPI/Controllers/AuthController.cs" relfile="Controllers/AuthController.cs" line="71" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

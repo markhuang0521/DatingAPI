@@ -33,6 +33,7 @@ namespace DatingApp.helper
 
 
             CreateMap<Photo, PhotoForDetailDto>();
+            CreateMap<UserForUpdateDto, User>();
         }
     }
 }
