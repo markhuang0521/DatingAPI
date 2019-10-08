@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{F64E4CB2-147E-4D68-AFEA-BFAA97A224BD}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="helper/AutoMapperProfiles.cs" Line="38" Column="6" />
-      <File FileName="Controllers/UsersController.cs" Line="63" Column="36" />
-      <File FileName="Startup.cs" Line="59" Column="41" />
+      <File FileName="Controllers/PhotoController.cs" Line="162" Column="14" />
+      <File FileName="Controllers/AuthController.cs" Line="109" Column="21" />
+      <File FileName="Models/User.cs" Line="1" Column="1" />
+      <File FileName="helper/AutoMapperProfiles.cs" Line="41" Column="2" />
+      <File FileName="Startup.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,8 +13,9 @@
           <Node name="DatingApp" expanded="True">
             <Node name="DatingApp" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="UsersController.cs" selected="True" />
+                <Node name="PhotoController.cs" selected="True" />
               </Node>
+              <Node name="Data" expanded="True" />
               <Node name="Dtos" expanded="True" />
               <Node name="helper" expanded="True" />
               <Node name="Models" expanded="True" />
@@ -22,13 +25,14 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../Controllers/PhotoController.cs" line="56" offsetX="-1" offsetY="-1" expression="photoDto" liveUpdate="False" />
+    <Watch file="../../../Controllers/PhotoController.cs" line="56" offsetX="-1" offsetY="-1" expression="photoDto" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MonoDevelop.Ide.ItemProperties.DatingApp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/markhuang/Documents/DatingAPI/Controllers/AuthController.cs" relfile="Controllers/AuthController.cs" line="71" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

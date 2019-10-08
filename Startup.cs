@@ -41,7 +41,7 @@ namespace DatingApp
             services.AddScoped<IAuthRepo, AuthRepo>();
             services.AddScoped<IDatingRepo, DatingRepo>();
 
-            services.AddAutoMapper();
+            services.AddAutoMapper(typeof(DatingRepo).Assembly);
             services.AddCors();
             services.AddDbContext<ApplicationDbContext>(Options => Options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -53,6 +53,9 @@ namespace DatingApp
            = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 }
                 );
+
+            // cloud storage for pictures
+            services.Configure<CloudinarySetting>(Configuration.GetSection("CloudinarySetting"));
 
             // jwt authorization
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -71,9 +74,10 @@ namespace DatingApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             //seeding database
+
             //seeder.SeedUsers();
             if (env.IsDevelopment())
             {

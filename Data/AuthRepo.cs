@@ -23,12 +23,12 @@ namespace DatingApp.Data
         }
         public async Task<User> Login(string userName, string password)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.UserName == userName);
-            if (user==null)
+            var user = await _context.Users.Include(x => x.Photos).FirstOrDefaultAsync(x => x.UserName == userName);
+            if (user == null)
             {
                 return null;
             }
-            if (!VerifyPasswordHash(password,user.PasswordHash,user.PasswordSalt))
+            if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
             {
                 return null;
             }
@@ -68,10 +68,10 @@ namespace DatingApp.Data
         {
             using (var hmac = new System.Security.Cryptography.HMACSHA512(passwordSalt))
             {
-               var computeHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+                var computeHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
                 for (int i = 0; i < computeHash.Length; i++)
                 {
-                    if (computeHash[i]!= passwordHash[i])
+                    if (computeHash[i] != passwordHash[i])
                     {
                         return false;
                     }
@@ -82,7 +82,7 @@ namespace DatingApp.Data
         }
         public async Task<bool> UserExist(string userName)
         {
-            if (await _context.Users.AnyAsync(x=>x.UserName == userName))
+            if (await _context.Users.AnyAsync(x => x.UserName == userName))
             {
                 return true;
             }
