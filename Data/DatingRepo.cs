@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DatingApp.helper;
 using DatingApp.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,10 +27,38 @@ namespace DatingApp.Data
             _context.Remove(entity);
         }
 
-        public async Task<IEnumerable<User>> GetUsers()
+        public async Task<PagedList<User>> GetUsers(UserParams userParams)
         {
-            var users = await _context.Users.Include(x => x.Photos).ToListAsync();
-            return users;
+            //filter users with oppsite gender and not current user
+            var users = _context.Users.Include(x => x.Photos).OrderByDescending(x => x.LastActive).AsQueryable();
+            users = users.Where(u => u.Id != userParams.UserId && u.Gender == userParams.Gender);
+
+            // age filter
+            if (userParams.MaxAge != 99 || userParams.MinAge != 18)
+            {
+                var minDob = DateTime.Today.AddYears(-userParams.MaxAge);
+                var maxDob = DateTime.Today.AddYears(-userParams.MinAge);
+                users = users.Where(x => x.DateOfBirth >= minDob && x.DateOfBirth <= maxDob);
+            }
+
+            //sorting filter
+            if (!string.IsNullOrEmpty(userParams.OrderBy))
+            {
+                switch (userParams.OrderBy)
+                {
+                    case "created":
+                        users = users.OrderByDescending(x => x.CreatedAt);
+                        break;
+
+                    default:
+                        users = users.OrderByDescending(x => x.LastActive);
+                        break;
+                }
+
+            }
+
+
+            return await PagedList<User>.creatAsync(users, userParams.PageNumber, userParams.PageSize);
         }
 
         public async Task<User> GetUser(int id)
@@ -56,5 +85,7 @@ namespace DatingApp.Data
         {
             return await _context.Photos.Where(u => u.UserId == userId).FirstOrDefaultAsync(p => p.IsMain);
         }
+
+
     }
 }

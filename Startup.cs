@@ -40,9 +40,12 @@ namespace DatingApp
             //repostory services
             services.AddScoped<IAuthRepo, AuthRepo>();
             services.AddScoped<IDatingRepo, DatingRepo>();
+            services.AddScoped<LongUserActivity>();
+
 
             services.AddAutoMapper(typeof(DatingRepo).Assembly);
             services.AddCors();
+            //setting sqlite as database
             services.AddDbContext<ApplicationDbContext>(Options => Options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)

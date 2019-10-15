@@ -1,22 +1,21 @@
 ﻿<Properties StartupConfiguration="{F64E4CB2-147E-4D68-AFEA-BFAA97A224BD}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Controllers/PhotoController.cs" Line="162" Column="14" />
-      <File FileName="Controllers/AuthController.cs" Line="109" Column="21" />
-      <File FileName="Models/User.cs" Line="1" Column="1" />
-      <File FileName="helper/AutoMapperProfiles.cs" Line="41" Column="2" />
-      <File FileName="Startup.cs" Line="1" Column="1" />
+      <File FileName="helper/PagedList.cs" Line="29" Column="67" />
+      <File FileName="helper/Extension.cs" Line="27" Column="1" />
+      <File FileName="Controllers/UsersController.cs" Line="40" Column="47" />
+      <File FileName="helper/UserParams.cs" Line="21" Column="30" />
+      <File FileName="Data/DatingRepo.cs" Line="59" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="DatingApp" expanded="True">
             <Node name="DatingApp" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="PhotoController.cs" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="DatingRepo.cs" selected="True" />
               </Node>
-              <Node name="Data" expanded="True" />
-              <Node name="Dtos" expanded="True" />
               <Node name="helper" expanded="True" />
               <Node name="Models" expanded="True" />
             </Node>
