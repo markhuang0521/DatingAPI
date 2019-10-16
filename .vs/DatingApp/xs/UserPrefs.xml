@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{F64E4CB2-147E-4D68-AFEA-BFAA97A224BD}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="helper/UserParams.cs">
     <Files>
       <File FileName="helper/PagedList.cs" Line="29" Column="67" />
-      <File FileName="helper/Extension.cs" Line="27" Column="1" />
-      <File FileName="Controllers/UsersController.cs" Line="40" Column="47" />
-      <File FileName="helper/UserParams.cs" Line="21" Column="30" />
-      <File FileName="Data/DatingRepo.cs" Line="59" Column="1" />
+      <File FileName="Models/Like.cs" Line="9" Column="26" />
+      <File FileName="Data/DatingRepo.cs" Line="63" Column="30" />
+      <File FileName="Controllers/UsersController.cs" Line="91" Column="30" />
+      <File FileName="helper/UserParams.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,10 +13,10 @@
           <Node name="DatingApp" expanded="True">
             <Node name="DatingApp" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True">
-                <Node name="DatingRepo.cs" selected="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="helper" expanded="True">
+                <Node name="UserParams.cs" selected="True" />
               </Node>
-              <Node name="helper" expanded="True" />
               <Node name="Models" expanded="True" />
             </Node>
           </Node>
